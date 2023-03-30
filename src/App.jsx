@@ -1,7 +1,12 @@
 import React from "react";
+import Navbar from "./components/Navbar";
 
 export default function App() {
   return (
-    <div className="text-green-400 text-center text-3xl font-semibold">App</div>
+    <>
+      <header>
+        <Navbar />
+      </header>
+    </>
   );
 }

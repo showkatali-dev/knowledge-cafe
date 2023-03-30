@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  @import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500;600;700&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+  @media (hover: none) {
+    * {
+      cursor: default !important;
+    }
+  }
+}
+
+@layer base {
+  body {
+    @apply font-exo text-[#111111];
+  }
+
+  .container {
+    @apply max-w-[1400px] mx-auto px-8;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r text-transparent bg-clip-text from-[#42A6E3] to-[#FF56F6] font-bold font-primary hover:from-[#FF56F6] hover:to-[#42A6E3];
+  }
+}
