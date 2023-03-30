@@ -1,3 +1,5 @@
+import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import Bookmarks from "./Bookmarks";
@@ -8,12 +10,20 @@ export default function Blogs() {
   const [blogs, setBlogs] = useState([]);
   const [reading_time, setReadingTime] = useState(0);
   const [bookmarks, setBookmarks] = useState([]);
+  const [showTopBtn, setShowTopBtn] = useState(false);
 
   useEffect(() => {
     fetch("blogs.json")
       .then((res) => res.json())
       .then((data) => setBlogs(data))
       .catch((err) => console.error(err));
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 400) setShowTopBtn(true);
+      else setShowTopBtn(false);
+    });
   }, []);
 
   const notify = (notification) =>
@@ -31,7 +41,7 @@ export default function Blogs() {
     if (bookmarks.map((item) => item.id).includes(id) === false) {
       setBookmarks((prev) => [...prev, { id, title }]);
     } else {
-      notify("Sorry! You have already bookmarked this blog");
+      notify("You have already bookmarked this blog!");
     }
   };
 
@@ -42,7 +52,7 @@ export default function Blogs() {
 
   return (
     <section className="container grid grid-cols-1 md:grid-cols-5 gap-12 my-14">
-      <div className="grid grid-cols-1 gap-y-12 md:col-span-3">
+      <div className="grid grid-cols-1 gap-y-16 md:col-span-3">
         {blogs.map((blog) => (
           <SingleBlog
             key={blog.id}
@@ -60,6 +70,19 @@ export default function Blogs() {
           />
         </div>
       </div>
+      {showTopBtn && (
+        <button
+          onClick={() => {
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }}
+          className="fixed z-40 bottom-6 right-6 text-xl w-12 h-12 rounded-full bg-gradient-to-tr from-red-400/30 to-purple-400/30 hover:from-red-400 hover:to-purple-400"
+        >
+          <FontAwesomeIcon icon={faChevronUp} />
+        </button>
+      )}
     </section>
   );
 }

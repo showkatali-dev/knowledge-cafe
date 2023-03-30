@@ -10,8 +10,14 @@ export default function SingleBlog({ data, handler }) {
   const { markAsReadHandler, bookmarkHandler } = handler;
 
   return (
-    <div className="blog w-full flex flex-col gap-y-4 pb-12 border-b-2 overflow-hidden">
-      <img src={cover} alt="" className="w-full rounded-md" />
+    <div className="blog w-full flex flex-col gap-y-4 pb-16 border-b-2 overflow-hidden">
+      <div className="rounded-md overflow-hidden">
+        <img
+          src={cover}
+          alt=""
+          className="w-full hover:scale-110 duration-300 cursor-pointer"
+        />
+      </div>
       <div className="mt-8 flex justify-between gap-x-4 items-center">
         <div className="flex justify-start items-center gap-4 sm:gap-6">
           <div className="w-12 h-12 flex-shrink-0 gradient-border rounded-full">
