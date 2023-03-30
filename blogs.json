@@ -1,15 +1,6 @@
 [
   {
     "id": 1,
-    "author_name": "PADDI MACDONNELL",
-    "blog_title": "Exciting New Tools for Designers in 2023",
-    "cover": "https://www.webdesignerdepot.com/imager/assets/posts/featured/09-sizzy_c764524587aa464c671576b8540b19f1.webp",
-    "avatar": "https://www.webdesignerdepot.com/assets/ui/avatars/_88x88_crop_center-center_none/46994/paddi_macdonnell.webp",
-    "reading_time": 10,
-    "date": "March 06, 2023"
-  },
-  {
-    "id": 2,
     "author_name": "WDD STAFF",
     "blog_title": "Free Download: Budget Planner UI Kit",
     "cover": "https://www.webdesignerdepot.com/imager/assets/posts/featured/budget_planner_c764524587aa464c671576b8540b19f1.webp",
@@ -17,6 +8,16 @@
     "reading_time": 5,
     "date": "March 03, 2023"
   },
+  {
+    "id": 2,
+    "author_name": "PADDI MACDONNELL",
+    "blog_title": "Exciting New Tools for Designers in 2023",
+    "cover": "https://www.webdesignerdepot.com/imager/assets/posts/featured/09-sizzy_c764524587aa464c671576b8540b19f1.webp",
+    "avatar": "https://www.webdesignerdepot.com/assets/ui/avatars/_88x88_crop_center-center_none/46994/paddi_macdonnell.webp",
+    "reading_time": 10,
+    "date": "March 06, 2023"
+  },
+
   {
     "id": 3,
     "author_name": "CARRIE COUSINS",

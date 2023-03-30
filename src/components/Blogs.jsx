@@ -12,12 +12,12 @@ export default function Blogs() {
   }, []);
 
   return (
-    <div className="container grid grid-cols-1 md:grid-cols-5 gap-12 my-14">
+    <section className="container grid grid-cols-1 md:grid-cols-5 gap-12 my-14">
       <div className="grid grid-cols-1 gap-y-14 col-span-3">
         {blogs.map((blog) => (
           <SingleBlog key={blog.id} data={blog} />
         ))}
       </div>
-    </div>
+    </section>
   );
 }

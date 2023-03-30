@@ -39,8 +39,12 @@ export default function SingleBlog({ data }) {
       </div>
       <h1 className="text-3xl font-bold max-w-[80%]">{blog_title}</h1>
 
-      <button className="text-xl text-[#6047EC] hover:underline self-start">
-        Mark as read <FontAwesomeIcon icon={faArrowRight} />
+      <button className="text-xl text-gradient self-start">
+        Mark as read{" "}
+        <FontAwesomeIcon
+          className="text-purple-400 align-middle"
+          icon={faArrowRight}
+        />
       </button>
     </div>
   );
