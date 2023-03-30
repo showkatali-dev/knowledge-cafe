@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import ReadTime from "./ReadTime";
 import SingleBlog from "./SingleBlog";
 
 export default function Blogs() {
@@ -13,10 +14,13 @@ export default function Blogs() {
 
   return (
     <section className="container grid grid-cols-1 md:grid-cols-5 gap-12 my-14">
-      <div className="grid grid-cols-1 gap-y-14 col-span-3">
+      <div className="grid grid-cols-1 gap-y-14 md:col-span-3">
         {blogs.map((blog) => (
           <SingleBlog key={blog.id} data={blog} />
         ))}
+      </div>
+      <div className="md:col-span-2">
+        <ReadTime />
       </div>
     </section>
   );
