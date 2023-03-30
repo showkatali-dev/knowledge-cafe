@@ -1,4 +1,5 @@
 import React from "react";
+import Blogs from "./components/Blogs";
 import Navbar from "./components/Navbar";
 
 export default function App() {
@@ -7,6 +8,9 @@ export default function App() {
       <header>
         <Navbar />
       </header>
+      <main>
+        <Blogs />
+      </main>
     </>
   );
 }
