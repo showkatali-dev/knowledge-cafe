@@ -2,7 +2,6 @@ import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
-import data from "../api/blogs.json";
 import Bookmarks from "./Bookmarks";
 import ReadTime from "./ReadTime";
 import SingleBlog from "./SingleBlog";
@@ -14,7 +13,10 @@ export default function Blogs() {
   const [showTopBtn, setShowTopBtn] = useState(false);
 
   useEffect(() => {
-    if (data) setBlogs(data);
+    fetch("/blogs.json")
+      .then((res) => res.json())
+      .then((data) => setBlogs(data))
+      .catch((err) => console.log(err));
   }, []);
 
   useEffect(() => {
