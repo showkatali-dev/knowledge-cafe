@@ -33,7 +33,7 @@ export default function InterviewBlog() {
         React Interview Question
       </h1>
       {questions.map((question, i) => (
-        <>
+        <div key={i}>
           <div className="border-b mb-4 pb-2">
             <div
               onClick={() => expandHandler(i)}
@@ -61,7 +61,7 @@ export default function InterviewBlog() {
               <p>{question.ans}</p>
             </div>
           </div>
-        </>
+        </div>
       ))}
     </section>
   );
