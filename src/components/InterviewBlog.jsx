@@ -36,7 +36,9 @@ export default function InterviewBlog() {
         <div key={i}>
           <div className="border-b mb-4 pb-2">
             <div
-              onClick={() => expandHandler(i)}
+              onClick={() => {
+                expandedIndex === i ? expandHandler(null) : expandHandler(i);
+              }}
               className="flex items-center justify-between gap-x-4 hover:cursor-pointer"
             >
               <h2
