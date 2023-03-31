@@ -2,6 +2,7 @@ import React from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Blogs from "./components/Blogs";
+import InterviewBlog from "./components/InterviewBlog";
 import Navbar from "./components/Navbar";
 
 export default function App() {
@@ -12,6 +13,7 @@ export default function App() {
       </header>
       <main>
         <Blogs />
+        <InterviewBlog />
       </main>
       <ToastContainer />
     </>

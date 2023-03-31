@@ -2,6 +2,7 @@ import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
+import data from "../api/blogs.json";
 import Bookmarks from "./Bookmarks";
 import ReadTime from "./ReadTime";
 import SingleBlog from "./SingleBlog";
@@ -13,10 +14,7 @@ export default function Blogs() {
   const [showTopBtn, setShowTopBtn] = useState(false);
 
   useEffect(() => {
-    fetch("blogs.json")
-      .then((res) => res.json())
-      .then((data) => setBlogs(data))
-      .catch((err) => console.error(err));
+    if (data) setBlogs(data);
   }, []);
 
   useEffect(() => {
@@ -78,7 +76,7 @@ export default function Blogs() {
               behavior: "smooth",
             });
           }}
-          className="fixed z-40 bottom-6 right-6 text-xl w-12 h-12 rounded-full bg-gradient-to-tr from-red-400/30 to-purple-400/30 hover:from-red-400 hover:to-purple-400"
+          className="fixed z-40 bottom-6 right-6 md:right-12 text-xl w-12 h-12 rounded-full bg-gradient-to-tr from-red-400 to-purple-400 opacity-20 hover:opacity-100"
         >
           <FontAwesomeIcon icon={faChevronUp} />
         </button>

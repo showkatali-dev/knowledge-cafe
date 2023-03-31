@@ -3,7 +3,7 @@ import SingleBookmark from "./SingleBookmark";
 
 export default function Bookmarks({ bookmarks, removeBookmarkHandler }) {
   return (
-    <div className="bookmarks border-2 rounded-md md:h-[60vh] max-h-[450px] md:overflow-y-auto bg-gray-400/30 py-6 px-4">
+    <div className="bookmarks border-2 rounded-md md:h-[60vh] max-h-[450px] overflow-y-auto bg-gray-400/30 py-6 px-4">
       <h2 className="font-bold text-2xl mb-6">
         Bookmarked Blogs: {bookmarks.length}
       </h2>
