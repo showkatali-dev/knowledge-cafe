@@ -29,7 +29,7 @@ export default function InterviewBlog() {
   };
   return (
     <section className="container my-24">
-      <h1 className="text-3xl text-center font-bold mb-8">
+      <h1 className="text-4xl px-4 text-center font-bold mb-8">
         React Interview Question
       </h1>
       {questions.map((question, i) => (
